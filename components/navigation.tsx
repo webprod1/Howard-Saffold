@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { assetPath } from "@/lib/assets";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ArrowUpRight, BookOpen } from "lucide-react";
@@ -10,7 +11,7 @@ export function Brand() {
     <span className="brand">
       {author.logo ? (
         <Image
-          src={author.logo}
+          src={assetPath(author.logo)}
           alt="Howard Saffold Books"
           width={44}
           height={44}

@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { author } from "@/lib/content";
+import { assetPath } from "@/lib/assets";
 gsap.registerPlugin(ScrollTrigger);
 export function Motion() {
   const path = usePathname();
@@ -25,7 +26,7 @@ export function Motion() {
           mark.className = "intro-mark";
           if (author.logo) {
             const img = document.createElement("img");
-            img.src = author.logo;
+            img.src = assetPath(author.logo);
             img.alt = "";
             img.onerror = () => { mark.textContent = "HS"; };
             mark.appendChild(img);

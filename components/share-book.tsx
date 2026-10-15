@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Share2 } from "lucide-react";
+import { assetPath } from "@/lib/assets";
 export function ShareBook({ title, slug }: { title: string; slug: string }) {
   const [status, setStatus] = useState("");
   return (
@@ -8,7 +9,7 @@ export function ShareBook({ title, slug }: { title: string; slug: string }) {
       <button
         className="share-button"
         onClick={async () => {
-          const url = `${window.location.origin}/books/${slug}`;
+          const url = `${window.location.origin}${assetPath(`/books/${slug}/`)}`;
           try {
             if (navigator.share) {
               await navigator.share({ title, url });

@@ -63,3 +63,10 @@ Type checking uses tsconfig.check.json to exclude generated build caches, becaus
 
 
 
+
+## GitHub Pages
+
+The public GitHub-hosted website is https://webprod1.github.io/Howard-Saffold/.
+Every push to main runs .github/workflows/pages.yml, checks the source, exports the site, and deploys through GitHub Pages.
+
+`pnpm build:pages` builds an isolated snapshot in .pages-build and writes the static export to out. It sets the repository base path for links, artwork, local fonts, metadata, sitemap, and sharing URLs. It excludes server API routes and explicitly disables contact delivery in the exported version. The original server-enabled source is preserved for Node or Sites hosting. GitHub Pages cannot run the email endpoint; enabling contact delivery there requires a separately hosted backend.

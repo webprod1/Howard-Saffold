@@ -8,7 +8,7 @@ const eslintConfig = defineConfig([
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
-    ".next/**",
+    ".next/**", ".pages-build/**",
     ".vinext/**",
     ".wrangler/**",
     ".sites-runtime/**",
@@ -29,4 +29,5 @@ const eslintConfig = defineConfig([
 ]);
 
 export default eslintConfig;
+
 

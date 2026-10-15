@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { assetPath } from "@/lib/assets";
 import type { CSSProperties } from "react";
 import Image from "next/image";
 import { ArrowRight, ArrowUpRight, BookOpen, MapPin } from "lucide-react";
@@ -14,12 +15,12 @@ export function BookCover({
   return (
     <div
       className={`book-object ${large ? "large" : ""} ${book.cover ? "has-cover" : ""}`}
-      style={book.spine ? { "--book-spine": `url("${book.spine}")` } as CSSProperties : undefined}
+      style={book.spine ? { "--book-spine": `url("${assetPath(book.spine)}")` } as CSSProperties : undefined}
       aria-label={`${book.title} by ${book.author}${book.cover ? "" : " — placeholder cover"}`}
     >
       {book.cover ? (
         <Image
-          src={book.cover}
+          src={assetPath(book.cover)}
           alt={`Cover of ${book.title} by ${book.author}`}
           width={600}
           height={900}
@@ -123,7 +124,7 @@ export function Biography({ full = false }: { full?: boolean }) {
         {author.portrait ? (
           <Image
             className="portrait"
-            src={author.portrait}
+          src={assetPath(author.portrait)}
             alt="Howard Saffold, author and community advocate"
             width={720}
             height={850}

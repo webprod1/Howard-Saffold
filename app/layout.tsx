@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { assetPath } from "@/lib/assets";
 import { Header, Footer } from "@/components/navigation";
 import { Motion } from "@/components/motion";
 import { siteUrl, jsonLd } from "@/lib/seo";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   },
   description: "The writings and legacy of Chicago author Howard Saffold.",
   robots: { index: true, follow: true },
-  icons: { icon: "/favicon.svg" },
+  icons: { icon: assetPath("/favicon.svg") },
 };
 export default function RootLayout({
   children,
