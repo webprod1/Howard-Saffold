@@ -26,7 +26,7 @@ For standard Next.js hosting (e.g. a Node server or Vercel), use `pnpm build:nex
 
 `lib/content.ts` is the central author / books / timeline data file. Add a book there; the bookshelf, book routes, and sitemap update automatically. Reviews, excerpts, endorsements, and upcoming content render only when their arrays/values have approved content. Do not add unverified claims.
 
-Put approved artwork in `public/images/`, then set `author.logo`, `author.portrait`, and each book's `cover` to the appropriate `/images/...` path. Supplied artwork uses next/image. The current logo mark, monogram portrait, and typographic book cover are explicitly labeled fallbacks; they do not depict an actual portrait or cover.
+Put approved artwork in `public/images/`, then set `author.logo`, `author.portrait`, and each book's `cover` to the appropriate `/images/...` path. Supplied artwork uses next/image. The logo mark and monogram portrait remain fallbacks. The book uses the supplied official artwork, with front and spine extracted from the full print wrap in public/images.
 
 The organization name Positive Anti-Crime Thrust, Inc. was checked against its own biography: https://www.positiveact.info/howard-saffold-bio/. The supplied phrase P Anti-Crime Trust was corrected. No reviews or endorsements have been invented. The publication year is the supplied 2026 reference; a full publication date, ISBN, editions, prices, and synopsis remain unconfirmed and are omitted from structured data.
 
@@ -52,7 +52,7 @@ Semantic pages, skip link, labeled forms, visible focus, active navigation, Esca
 
 ## Launch items awaiting author approval
 
-- Official logo, author portrait, and actual book cover.
+- Official logo and author portrait.
 - Approved synopsis, publication/edition details, excerpts, and any verified reviews.
 - Receiving address, sending domain, and email service credentials.
 - Final public domain, public hosting access, privacy contact, and retention terms.
@@ -60,5 +60,6 @@ Semantic pages, skip link, labeled forms, visible focus, active navigation, Esca
 See `QA.md` for verification performed during delivery.
 
 Type checking uses tsconfig.check.json to exclude generated build caches, because Next.js and Vinext generate different route-type files in .next. Stop the development server before switching production build engines.
+
 
 

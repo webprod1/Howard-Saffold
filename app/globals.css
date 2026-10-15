@@ -388,6 +388,14 @@ svg {
   );
   pointer-events: none;
 }
+.book-object.has-cover {
+  background: #ded6c8;
+}
+.book-object.has-cover:before {
+  background: #d5cdbf var(--book-spine, none) center / 100% 100% no-repeat;
+  border-left-color: #b9ad9b;
+  box-shadow: inset 2px 0 4px #00000016;
+}
 .book-object img {
   width: 100%;
   height: 100%;

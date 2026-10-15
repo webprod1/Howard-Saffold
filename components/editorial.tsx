@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import { ArrowRight, ArrowUpRight, BookOpen, MapPin } from "lucide-react";
 import { author, milestones, type Book } from "@/lib/content";
@@ -12,7 +13,8 @@ export function BookCover({
 }) {
   return (
     <div
-      className={`book-object ${large ? "large" : ""}`}
+      className={`book-object ${large ? "large" : ""} ${book.cover ? "has-cover" : ""}`}
+      style={book.spine ? { "--book-spine": `url("${book.spine}")` } as CSSProperties : undefined}
       aria-label={`${book.title} by ${book.author}${book.cover ? "" : " — placeholder cover"}`}
     >
       {book.cover ? (
@@ -21,6 +23,7 @@ export function BookCover({
           alt={`Cover of ${book.title} by ${book.author}`}
           width={600}
           height={900}
+          sizes="(max-width: 580px) 240px, (max-width: 1100px) 260px, 320px"
           priority={large}
         />
       ) : (

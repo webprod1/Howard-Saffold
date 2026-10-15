@@ -17,6 +17,7 @@ export type Book = {
   year: number;
   amazon: string;
   cover: string | null;
+  spine?: string | null;
   description: string | null;
   excerpts: string[];
   reviews: { text: string; by: string; source: string }[];
@@ -31,7 +32,8 @@ export const books: Book[] = [
     year: 2026,
     amazon:
       "https://www.amazon.com/Police-Prisons-Politics-Howard-Saffold/dp/B0HGQJMW5Q",
-    cover: null,
+    cover: "/images/police-prisons-politics-power-cover.webp",
+    spine: "/images/police-prisons-politics-power-spine.webp",
     description: null,
     excerpts: [],
     reviews: [],
