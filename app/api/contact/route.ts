@@ -29,7 +29,7 @@ export async function POST(request: Request) {
     if (done) break;
     size += value.length;
     if (size > 16000) {
-      await reader.cancel();
+      // Return without cancelling the transport stream; the host drains it.
       return response("Your message is too large.", 413);
     }
     raw += decoder.decode(value, { stream: true });
@@ -95,4 +95,5 @@ export async function POST(request: Request) {
     );
   }
 }
+
 
