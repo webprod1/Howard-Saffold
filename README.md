@@ -32,7 +32,7 @@ The organization name Positive Anti-Crime Thrust, Inc. was checked against its o
 
 ## Contact delivery
 
-The form stays disabled and the API returns 503 until all three server environment variables are configured:
+The form stays disabled and the API returns 409 until all three server environment variables are configured:
 
 - `CONTACT_TO`: approved receiving address
 - `CONTACT_FROM`: verified sending address on Resend
@@ -60,4 +60,5 @@ Semantic pages, skip link, labeled forms, visible focus, active navigation, Esca
 See `QA.md` for verification performed during delivery.
 
 Type checking uses tsconfig.check.json to exclude generated build caches, because Next.js and Vinext generate different route-type files in .next. Stop the development server before switching production build engines.
+
 

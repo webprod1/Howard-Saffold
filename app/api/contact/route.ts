@@ -54,7 +54,7 @@ export async function POST(request: Request) {
   )
     return response(
       "Message delivery is not configured. Your message has not been sent.",
-      503,
+      409,
     );
   // Plain text email avoids HTML injection. User input never becomes an address header.
   try {
@@ -95,3 +95,4 @@ export async function POST(request: Request) {
     );
   }
 }
+

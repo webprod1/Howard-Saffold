@@ -13,5 +13,6 @@ assert.equal((await post({...payload,email:'invalid'})).status,400);
 assert.equal((await post({...payload,website:'bot.example'})).status,400);
 assert.equal((await post({...payload,started:Date.now()+60000})).status,429);
 assert.equal((await post({...payload,message:'x'.repeat(17000)})).status,413);
-const disabled=await post(payload);assert.equal(disabled.status,503);assert.match(await disabled.text(),/not been sent/);
+const disabled=await post(payload);assert.equal(disabled.status,409);assert.match(await disabled.text(),/not been sent/);
 console.log('PASS robots, sitemap, 404, contact validation, origin protection, honeypot, timing, body limit, disabled delivery');
+
