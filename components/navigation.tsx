@@ -12,9 +12,11 @@ export function Brand() {
       {author.logo ? (
         <Image
           src={assetPath(author.logo)}
-          alt="Howard Saffold Books"
-          width={44}
-          height={44}
+          alt="Howard Saffold Publications logo"
+          className="brand-logo"
+          width={105}
+          height={96}
+          sizes="(max-width: 580px) 50px, 64px"
         />
       ) : (
         <span className="brand-icon">

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
   description: "The writings and legacy of Chicago author Howard Saffold.",
   robots: { index: true, follow: true },
-  icons: { icon: assetPath("/favicon.svg") },
+  icons: { icon: assetPath("/images/howard-saffold-logo.png") },
 };
 export default function RootLayout({
   children,

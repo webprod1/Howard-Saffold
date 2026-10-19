@@ -202,6 +202,13 @@ svg {
   letter-spacing: 1.7px;
   line-height: 1.4;
 }
+.brand-logo {
+  display: block;
+  width: 64px;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+}
 .brand small {
   display: block;
   font-family: Inter, Arial, sans-serif;
@@ -1139,8 +1146,8 @@ svg {
   letter-spacing: -5px;
 }
 .intro-mark img {
-  width: 90px;
-  height: 90px;
+  width: 105px;
+  height: auto;
   object-fit: contain;
 }
 .intro-line {
@@ -1475,6 +1482,9 @@ svg {
   .brand-icon {
     width: 34px;
     height: 38px;
+  }
+  .brand-logo {
+    width: 50px;
   }
   .brand-icon svg {
     width: 21px;
