@@ -152,17 +152,10 @@ export function Biography({ full = false }: { full?: boolean }) {
           A Chicago story. A lifetime
           <br className="desktop-break" /> committed to change.
         </p>
-        {author.biography.slice(0, full ? 3 : 2).map((p) => (
+        {(full ? author.biography : author.biography.slice(0, 2)).map((p) => (
           <p key={p}>{p}</p>
         ))}
-        {full ? (
-          <div className="source-note">
-            Biographical source:{" "}
-            <a href={author.source} target="_blank" rel="noopener noreferrer">
-              Positive Anti-Crime Thrust, Inc. <ArrowUpRight size={12} />
-            </a>
-          </div>
-        ) : (
+        {!full && (
           <Link className="text-link" href="/about">
             Read his story <ArrowRight size={17} />
           </Link>

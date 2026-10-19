@@ -2,13 +2,17 @@ export const author = {
   name: "Howard Saffold",
   siteName: "Howard Saffold Books",
   logo: null as string | null,
-  portrait: null as string | null,
+  portrait: "/images/howard-saffold-portrait.png" as string | null,
   biography: [
-    "Born in Chicago in 1941, Howard Saffold served in the United States Army before joining the Chicago Police Department in 1965.",
-    "During his police career, he became involved with the Afro-American Police League, challenging racial discrimination and misconduct within the department. He later served as its president.",
-    "After approximately 25 years of service, he retired from the department. His work in crime prevention, police-community relations, community advocacy, and criminal justice reform continued through Positive Anti-Crime Thrust, Inc.",
+    "Howard Saffold was born in Chicago on January 26, 1941. After graduating from Farragut High School in 1959, he entered the U.S. Army, completing his service in 1962.",
+    "He joined the Chicago Police Department in 1965. Experiences of discrimination and police misconduct helped shape his commitment to reform. He joined the Afro-American Police League and later became its president.",
+    "In 1979, Saffold and Renault Robinson co-founded Positive Anti-Crime Thrust to strengthen cooperation between police and the communities they serve.",
+    "Mayor Harold Washington appointed him chief of executive security in 1983. He continued in that role under Mayor Eugene Sawyer.",
+    "After retiring from the department in 1991, Saffold returned his focus to Positive Anti-Crime Thrust and community-based crime prevention. His advocacy has included work with community organizations, schools, and prison ministries.",
+    "Saffold earned a bachelor’s degree in business administration from Chicago State University and a master’s degree in urban studies from Northeastern Illinois University.",
   ],
   source: "https://www.positiveact.info/howard-saffold-bio/",
+  biographyReference: "https://www.thehistorymakers.org/biography/howard-saffold-39",
 };
 export type Book = {
   slug: string;

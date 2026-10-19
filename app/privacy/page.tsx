@@ -16,8 +16,9 @@ export default function Privacy() {
       <article className="section container prose">
         <h2>Browsing this website</h2>
         <p>
-          This website does not include advertising trackers or third-party
-          analytics. The hosting provider may process technical request
+          This website does not add advertising trackers or analytics scripts.
+          Embedded video is provided by Vimeo, as described below.
+          The hosting provider may process technical request
           information, such as IP addresses and access logs, to deliver and
           protect the website.
         </p>
@@ -35,6 +36,13 @@ export default function Privacy() {
           The website uses session storage to remember whether you have seen the
           introductory animation. This preference lasts for the browser session
           and does not contain personal information.
+        </p>
+        <h2>Embedded video</h2>
+        <p>
+          The About the Author page embeds a Vimeo player. When the player
+          loads, your browser connects to Vimeo, which may process request
+          information and use cookies or browser storage under its own privacy
+          policy. Video playback is controlled by you; it does not autoplay.
         </p>
         <h2>External links</h2>
         <p>
