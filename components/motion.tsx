@@ -1,5 +1,6 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Pause, Play } from "lucide-react";
 import { usePathname } from "next/navigation";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -8,6 +9,11 @@ import { assetPath } from "@/lib/assets";
 gsap.registerPlugin(ScrollTrigger);
 export function Motion() {
   const path = usePathname();
+  const [paused, setPaused] = useState(false);
+  useEffect(() => {
+    document.documentElement.dataset.bookMotion = paused ? "paused" : "running";
+    return () => { delete document.documentElement.dataset.bookMotion; };
+  }, [paused]);
   useEffect(() => {
     const media = gsap.matchMedia();
     let intro: HTMLDivElement | null = null;
@@ -104,5 +110,16 @@ export function Motion() {
       document.removeEventListener("keydown", skip);
     };
   }, [path]);
-  return null;
+  if (path !== "/" && !path.startsWith("/books")) return null;
+  return (
+    <button
+      className="book-motion-toggle"
+      aria-pressed={paused}
+      aria-label={paused ? "Resume book animation" : "Pause book animation"}
+      onClick={() => setPaused(!paused)}
+    >
+      {paused ? <Play size={14} /> : <Pause size={14} />}
+      {paused ? "Resume motion" : "Pause motion"}
+    </button>
+  );
 }
