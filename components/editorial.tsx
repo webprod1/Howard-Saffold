@@ -124,10 +124,11 @@ export function Biography({ full = false }: { full?: boolean }) {
         {author.portrait ? (
           <Image
             className="portrait"
-          src={assetPath(author.portrait)}
+            src={assetPath(author.portrait)}
             alt="Howard Saffold, author and community advocate"
-            width={720}
-            height={850}
+            width={1254}
+            height={1254}
+            sizes="(max-width: 580px) 90vw, 350px"
           />
         ) : (
           <div className="portrait-placeholder">

@@ -2,7 +2,7 @@ export const author = {
   name: "Howard Saffold",
   siteName: "Howard Saffold Books",
   logo: "/images/howard-saffold-logo.png" as string | null,
-  portrait: "/images/howard-saffold-portrait.png" as string | null,
+  portrait: "/images/howard-saffold-portrait-hq.webp" as string | null,
   biography: [
     "Howard Saffold was born in Chicago on January 26, 1941. After graduating from Farragut High School in 1959, he entered the U.S. Army, completing his service in 1962.",
     "He joined the Chicago Police Department in 1965. Experiences of discrimination and police misconduct helped shape his commitment to reform. He joined the Afro-American Police League and later became its president.",

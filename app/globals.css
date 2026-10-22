@@ -653,7 +653,7 @@ svg {
   justify-self: center;
 }
 .portrait-wrap .portrait {
-  aspect-ratio: 219 / 224;
+  aspect-ratio: 1 / 1;
   height: auto;
 }
 .interview-section {
